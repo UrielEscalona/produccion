@@ -10,10 +10,10 @@ El objetivo es proporcionar una guía clara y progresiva, desde lo más básico 
 
 ```
 produccion/
-├── basico/           # Scripts simples de modelos (ej. regresión, clasificación)
-├── intermedio/       # APIs sencillas con Flask o FastAPI, serialización de modelos
-├── avanzado/         # Docker, despliegue, CI/CD, autenticación
-├── utils/            # Funciones auxiliares reutilizables
+├── basico/           # Modelos en local, ejecutados de la forma mas sencilla
+├── intermedio/       # Modelos en contenedores
+├── avanzado/         # Modelos en diferentes nubes (GCP, AWS, Azure y mas)
+├── utils/            # Funciones auxiliares reutilizables y archivos de ayuda
 ├── README.md         # Documentación general del proyecto
 └── .gitignore        # Archivos a ignorar por Git
 ```
