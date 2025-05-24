@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Transcriptor de Audio</title>
+</head>
+<body>
+    <h1>Sube un archivo de audio</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="archivo" accept="audio/*" required>
+        <button type="submit">Transcribir</button>
+    </form>
+
+    {% if transcripcion %}
+        <h2>Transcripción:</h2>
+        <p>{{ transcripcion }}</p>
+    {% endif %}
+</body>
+</html>
