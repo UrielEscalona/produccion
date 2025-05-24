@@ -27,6 +27,10 @@ Para ejecutar este ejemplo necesitas:
   ```bash
   pip install git+https://github.com/openai/whisper.git
   ```
+- O instalar requirements.txt:
+  ```bash
+  pip install -r requirements.txt
+  ```
 
 ---
 
