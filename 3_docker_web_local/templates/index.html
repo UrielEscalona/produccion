@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Transcriptor de Audio</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        input[type=file], input[type=submit] { margin-top: 10px; }
+        .resultado { margin-top: 20px; white-space: pre-wrap; background: #f2f2f2; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Transcriptor de Audio (.wav)</h1>
+    <form method="post" action="/" enctype="multipart/form-data">
+        <input type="file" name="audio" accept=".wav" required><br>
+        <input type="submit" value="Transcribir">
+    </form>
+
+    {% if resultado %}
+    <div class="resultado">
+        <h2>Resultado:</h2>
+        <p>{{ resultado }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
