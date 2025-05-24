@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detector de Objetos - YOLOv8n</title>
+</head>
+<body>
+    <h1>Detector de Objetos (versión ligera)</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="imagen" accept="image/*" required>
+        <button type="submit">Analizar imagen</button>
+    </form>
+
+    {% if resultado %}
+        <h2>Objetos detectados:</h2>
+        <ul>
+        {% for r in resultado %}
+            <li>{{ r }}</li>
+        {% endfor %}
+        </ul>
+        <img src="{{ url_for('imagen_procesada', filename=imagen) }}" width="600">
+    {% endif %}
+</body>
+</html>
